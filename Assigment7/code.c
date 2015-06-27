@@ -149,7 +149,6 @@ int main() {
 	odpri = fopen(inputName, "r");
 	if(odpri == NULL) {
 		fprintf(zapisi, "datoteka ne obstaja");
-		fclose(odpri);
 		fclose(zapisi);
 		return 0;
 	}
