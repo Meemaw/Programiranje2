@@ -18,7 +18,7 @@ char izberiZnak(int sivina, char* tabelaCharov, int* tabelaIntov) {
 void preberiFile(char* inputName, char* outputName, int velikostOkna) {
     FILE* odpri;
     odpri = fopen(inputName, "rb");
-    int sirinaSlike, visinaSlike, red, green, blue, piksli, novPiksl, maxVal;
+    int sirinaSlike, visinaSlike, red, green, blue, piksli, novPiksl;
     char read_string[100];
     char* split;
     
@@ -32,9 +32,6 @@ void preberiFile(char* inputName, char* outputName, int velikostOkna) {
             sirinaSlike = atoi(split);
             split = strtok(NULL, " ");
             visinaSlike = atoi(split);
-        }
-        if(i == 2) {
-            maxVal = atoi(read_string);
         }
     }
     int** tabelaPikslov;
