@@ -12,15 +12,16 @@ struct besedilo {
 	int steviloZnakov;
 };
 
+char inputName[256];
+char outputName[256];
 
 
 
-void preberiFile(char* inputName, struct besedilo *besedilo) {
+
+void preberiFile(struct besedilo *besedilo) {
 	int current_size = 128;
-	int* tempTabela = NULL;
+	int* tempTabela = malloc(current_size*sizeof(int));
 
-	// allociramo prostor za tabelo znakov
-	tempTabela = malloc(current_size*sizeof(int));
 	int i = 0;
 
 
@@ -157,8 +158,7 @@ int main() {
 
 
 	// priprava dveh stringov za imena datotek
-	char inputName[256];
-	char outputName[256];
+
 
 	scanf("%s", inputName);
 	scanf("%s", outputName);
@@ -166,13 +166,16 @@ int main() {
 	struct besedilo besedilo;
 
 	// preberem file ki ga je treba zakodirat
-	preberiFile(inputName, &besedilo);
+	preberiFile(&besedilo);
 
 
 	struct tabela tabela;
 	// ce datoteka obstaja jo kodiram, drugace izpisem da ne obstaja
 	FILE *zapisi;
 	zapisi = fopen(outputName, "w");
+	if(zapisi == NULL) {
+		
+	}
 	if(besedilo.steviloZnakov > 0) {
 		kodirajCete(besedilo, &tabela);
 		zapisiDatoteko(&tabela, zapisi);
