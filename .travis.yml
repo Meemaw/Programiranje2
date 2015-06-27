@@ -1,5 +1,4 @@
 language: c
 compiler: gcc
 
-script:
-	- (cd Assigment1 && make test)
+script: ./tests.sh

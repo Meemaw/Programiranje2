@@ -5,18 +5,20 @@ ID = code
 
 $(ID)	: code.c
 	@echo "=== COMPILING: ==="
-	$(CC) $(CFLAGS) -o $@ $< $(LIBS)
+	$(CC) $(CFLAGS) -o $@.out $< $(LIBS)
 	@echo
 
 test	: $(ID)
 	@echo "=== TESTING: ==="
-	ulimit -t 1 ; ./$(ID) < ./tests/input-1 > result-1
+	ulimit -t 1 ; ./$(ID).out < ./tests/input-1 > result-1
 	if diff -w -B result-1 ./tests/output-1 ; then echo "1 - correct" ; fi
-	ulimit -t 1 ; ./$(ID) < ./tests/input-2 > result-2
+	ulimit -t 1 ; ./$(ID).out < ./tests/input-2 > result-2
 	if diff -w -B result-2 ./tests/output-2 ; then echo "2 - correct" ; fi
-	ulimit -t 1 ; ./$(ID) < ./tests/input-3 > result-3
+	ulimit -t 1 ; ./$(ID).out < ./tests/input-3 > result-3
 	if diff -w -B result-3 ./tests/output-3 ; then echo "3 - correct" ; fi
 
 	@echo
-	@'rm' -fr $(ID) *~
 	@'rm' -fr result-* *~
+
+clean	:
+	@'rm' -fr $(ID).out *~
