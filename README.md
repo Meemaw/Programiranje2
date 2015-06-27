@@ -3,13 +3,12 @@
 
 
 This is a repository of solutions to my assigments at class "Programiranje 1" at my university.
-Code is being tested with the inputs from university.
 Code is automatically tested via Travis with every push/pull.
 
 
 Every assigment directory has raw code, test file and makefile in it.
-Tests are being runned from ./scripts.
-Test script iterate through the assisgments and running makefile in each, testing the code.
+Test is executed from ./scripts.
+Test script iterate through the assisgments and running makefile in each, testing the code with given inputs and outputs.
 
 
 
