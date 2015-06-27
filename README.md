@@ -8,7 +8,7 @@ Code is automatically tested via Travis with every push/pull.
 
 Every assigment directory has raw code, test file and makefile in it.
 Test is executed from ./scripts.
-Test script iterate through the assisgments and running makefile in each, testing the code with given inputs and outputs.
+Test script iterate through the assisgments, running makefile in each which tests the code with given inputs and outputs.
 
 
 
