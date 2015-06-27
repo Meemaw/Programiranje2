@@ -10,11 +10,11 @@ $(ID)	: code.c
 
 test	: $(ID)
 	@echo "=== TESTING: ==="
-	ulimit -t 1 ; ./$(ID).out < ./tests/input-1 > result-1
+	./$(ID).out < ./tests/input-1 > result-1
 	if diff -w -B result-1 ./tests/output-1 ; then echo "1 - correct" ; fi
-	ulimit -t 1 ; ./$(ID).out < ./tests/input-2 > result-2
+	./$(ID).out < ./tests/input-2 > result-2
 	if diff -w -B result-2 ./tests/output-2 ; then echo "2 - correct" ; fi
-	ulimit -t 1 ; ./$(ID).out < ./tests/input-3 > result-3
+	./$(ID).out < ./tests/input-3 > result-3
 	if diff -w -B result-3 ./tests/output-3 ; then echo "3 - correct" ; fi
 
 	@echo
