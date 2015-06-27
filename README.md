@@ -2,7 +2,7 @@
 
 
 
-This is a repository of solutions to my assigments at class "Programiranje 1" at my university.
+This is a repository of solutions to my assigments at class "Programiranje 2" at my university.
 Code is automatically tested via Travis with every push/pull.
 
 
