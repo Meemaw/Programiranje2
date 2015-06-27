@@ -5,6 +5,6 @@ os:
   - linux
   - osx
 
-script: ./tests.sh
+script: ./scripts/tests.sh
 
 
