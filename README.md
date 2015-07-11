@@ -3,7 +3,7 @@
 
 
 This is a repository of solutions to my assigments at class "Programiranje 2" at my university.
-Code is automatically tested via Travis with every push/pull.
+Code is automatically tested via Travis with every push.
 
 
 Every assigment directory has raw code, test file and makefile in it.
